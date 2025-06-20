@@ -1,0 +1,24 @@
+Exercise 2: 
+Sample Commands for crea ng files: 
+
+hadoop fs -touchz /1.txt          
+hadoop fs -touchz /1.docx        -for text file -for document file 
+
+Commands for crea ng directories: 
+
+Hadoop fs -mkdir /mydir            -for directories 
+
+Command to create subdirectory:       
+
+Hadoop fs -mkdir /mydir/dir1     -for sub directories 
+
+Retrieving files: 
+
+Hadoop fs -get /path/to/1.txt c:\local\ 
+Haddop fs -put /path/to/1.txt c:\local\ 
+
+Deleting file: 
+Hadoop fs -rm /1.txt    
+
+Deleting directory:         -for deleting files 
+Hadoop fs -rm -r /directoryname         -for deleting directory
