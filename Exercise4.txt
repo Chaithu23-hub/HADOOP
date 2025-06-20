@@ -1,0 +1,27 @@
+WORD COUNT 
+Exercise 4 
+1. Create a text file named “data.txt” in the following loca on "C:\hadoop\data.txt" 
+Apple 
+Banana 
+Computer 
+Data 
+Apple 
+Data 
+Horizon 
+Banana 
+Journal 
+Data 
+2. Open cmd as “Run as administrator”  
+ Start all node  
+C:\Windows\System32>start-all.cmd 
+ Crea ng an directory named “input” 
+C:\Windows\System32>hdfs dfs -mkdir /input 
+ Place “data.txt” file in the datanodes 
+C:\Windows\System32>hdfs dfs -put "C:\hadoop\data.txt" /input 
+ Verifica on file 
+C:\Windows\System32>hdfs dfs -ls /input 
+ Running the jar file 
+C:\Windows\System32> 
+hadoop jar "C:\hadoop\share\hadoop\mapreduce\hadoop-mapreduce-examples-3.3.6.jar" wordcount /input /Output 
+ Checking the Output  
+C:\Windows\System32>hdfs dfs -cat /Output/part-r-00000
