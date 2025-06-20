@@ -1,0 +1,78 @@
+STRATING ALL NODES: 
+Exercise-3: 
+C:\Windows\System32>start-all.cmd 
+
+This script is Deprecated. Instead use start-dfs.cmd and start-yarn.cmd 
+star ng yarn daemons 
+Review the commands available for the Hadoop Distributed File System 
+
+C:\Windows\System32>hdfs dfs -help 
+
+Copy file foo.txt from local disk to the user‟s directory in HDFS 
+
+C:\Windows\System32>hadoop fs -ls / 
+
+Found 1 items 
+drwxr-xr-x   - dines supergroup          
+0 2025-02-06 13:02 /AITS 
+
+C:\Windows\System32>hadoop fs -mkdir /AU 
+C:\Windows\System32>hadoop fs -ls /AU 
+C:\Windows\System32>hadoop fs -cp /AITS/*.txt /AU/ 
+C:\Windows\System32>hadoop fs -ls /AU 
+
+Found 1 items -rw-r--r--   1 dines supergroup        
+850 2025-02-06 15:27 /AU/Example1.txt 
+Get a directory lis ng of the user‟s home directory in HDFS 
+
+C:\Windows\System32>hdfs dfs -ls /AITS 
+
+Found 1 items -rw-r--r--   1 dines supergroup        
+850 2025-02-06 13:02 /AITS/Example1.txt 
+Get a directory lis ng of the HDFS root directory 
+
+C:\Windows\System32>hdfs dfs -ls / 
+
+Found 2 items 
+drwxr-xr-x   - dines supergroup          
+drwxr-xr-x   - dines supergroup          
+0 2025-02-06 13:02 /AITS 
+0 2025-02-06 15:27 /AU 
+Display the contents of the HDFS file user/fred/bar.txt 
+
+C:\Windows\System32>hadoop fs -cat /AU/Example1.txt 
+
+Sri. C. Gangi Reddy garu, HonΓÇÖ Secretary of Annamacharya Educa onal Trust. He was born in the year 1954 to 
+Choppa Narayana Reddy and Choppa Rajamma, a farmers family in Siddulapally, very close to Thallapaka the birth 
+place of saint poet Annamacharya. He completed his ini al educa on in Thallapaka and then went to Sri 
+Govindarajaswamy Degree College, Tirupathi where he completed his gradua on in B.Com. He got his Post Graduate 
+degree Master of Commerce from Sri Venkateswara University, Tirupa in the year 1977. He completed LLB in 1981 
+through evening college from Osmania University. He started his official career in the department of agriculture 
+immediately a er post gradua on through APPSC Hyderabad but having got selected through APPSC Group-II 
+immediately joined as Sub Register in the registra on department of AP Government. 
+(OR) Hadoop fs -tail /AITS/Example1.txt   (OR)     hadoop fs -text /AITS/Example1.txt 
+Move that file to the local disk, named as baz.txt 
+
+C:\Windows\System32>hdfs dfs -ls /AITS 
+
+Found 1 items -rw-r--r--   1 dines supergroup        
+850 2025-02-06 15:54 /AITS/Example1.txt 
+
+C:\Windows\System32>hadoop fs -ls /AU 
+C:\Windows\System32>hdfs dfs -mv /AITS/Example1.txt /AU/baz.txt 
+C:\Windows\System32>hadoop fs -ls /AU 
+
+Found 1 items -rw-r--r--   1 dines supergroup        
+850 2025-02-06 15:54 /AU/Example1.txt 
+
+C:\Windows\System32>hadoop fs -ls /AITS 
+
+Create a directory called input under the user‟s home directory 
+
+C:\Windows\System32>hadoop fs -mkdir /User/input 
+
+Delete the directory input old and all its contents 
+
+C:\Windows\System32>hadoop fs -rm -r /User/ 
+
+Deleted /User
